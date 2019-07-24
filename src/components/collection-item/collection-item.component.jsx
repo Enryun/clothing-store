@@ -21,7 +21,7 @@ const CollectionItem = ({item, addItem}) => {
             <span className='price'>{price}</span>
         </div>
         <CustomButton onClick={() => addItem(item)} 
-                      inverted>
+                      inverted='true'>
                 Add to Cart
         </CustomButton>
     </div>
