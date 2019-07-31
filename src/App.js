@@ -13,6 +13,7 @@ import {createStructuredSelector} from 'reselect';
 import CheckOutPage from './pages/checkout/checkout.component.jsx';
 
 
+
 class App extends React.Component {
 
   unsubscribeFromAuth = null;
@@ -31,9 +32,16 @@ class App extends React.Component {
               ...snapShot.data()
           })
         })
-      } else {
-        setCurrentUser(userAuth)
-      }
+      } 
+
+      setCurrentUser(userAuth);
+
+      //Sending Data from shop.data to Firestore, 1 time only
+      // addCollectionAndDocuments('collections', collectionArray.map(
+      //   ({title, items}) => ({title, items})
+      // ))
+      // console.log(collectionArray);
+      
     })
   }
 
@@ -60,7 +68,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 })
 
 const mapDispathchToProps = dispatch => ({
