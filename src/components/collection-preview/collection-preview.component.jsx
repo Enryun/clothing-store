@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 
 const CollectionPreview = ({title, items, history, match, routeName }) => (
     <div className='collection-preview'>
-        {console.log(history)}
         <h1 className='title'
             onClick={() => history.push(`${match.path}/${routeName}`)}
             >
