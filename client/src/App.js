@@ -19,6 +19,7 @@ const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const SignInUp = lazy(() => import('./pages/sign-in-up/sign-in-up'));
 const CheckOutPage = lazy(() => import('./pages/checkout/checkout.component.jsx'));
+const Contact = lazy(() => import('./pages/contact/contact.component'));
 
 
 class App extends React.Component {
@@ -44,6 +45,7 @@ class App extends React.Component {
               <Suspense fallback={<Spinner />}>
                 <Route exact path='/' component={HomePage} />
                 <Route path='/shop' component={ShopPage} />
+                <Route exact path='/contact' component={Contact} />
                 <Route exact path='/checkout' component={CheckOutPage} />
                 <Route exact 
                       path='/signin' 
